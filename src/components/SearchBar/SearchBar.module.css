@@ -45,5 +45,5 @@
 .searchBtn:focus {
   outline: none;
   border: none;
-  border-color: transparent;
+  color: rgb(140, 140, 152);
 }
