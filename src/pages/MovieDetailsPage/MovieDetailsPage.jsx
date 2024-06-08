@@ -5,6 +5,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Loader from '../../components/Loader/Loader';
 import css from './MovieDetailsPage.module.css';
 import { RiArrowGoBackFill } from "react-icons/ri";
+import { defaultImg } from '../../api/helpers';
 
 const MovieDetailsPage = ()=> {
   const { movieId } = useParams();
@@ -32,17 +33,14 @@ const MovieDetailsPage = ()=> {
     fetchMovieById();
   }, [movieId]);
 
-  const defaultImg =
-    'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
-
-  const getYear = releaseDate => {
+    const getYear = releaseDate => {
     return releaseDate ? releaseDate.split('-')[0] : 'Unknown Year';
   };
 
   return (
     <div>
       <NavLink className={css.back_link} to={goBack.current}>
-        <RiArrowGoBackFill />Go Back
+        <RiArrowGoBackFill />&nbsp;Go Back
       </NavLink>
       {isError && <ErrorMessage />}
       {isLoading && <Loader />}

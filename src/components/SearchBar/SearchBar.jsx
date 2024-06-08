@@ -1,6 +1,7 @@
-import { Field, Form, Formik } from 'formik';
 import { toast, Toaster } from 'react-hot-toast';
+import { Field, Form, Formik } from 'formik';
 import css from './SearchBar.module.css';
+
 
 const SearchBar = ({ onSearch })=> {
   return (

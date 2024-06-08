@@ -1,9 +1,11 @@
+import { useLocation, useParams } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+
 import { getReviewsById } from '../../api/movies-api';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Loader from '../../components/Loader/Loader';
-import { useLocation, useParams } from 'react-router-dom';
-import { useEffect, useRef, useState } from 'react';
 import css from './MovieReviews.module.css';
+
 
 const MovieReviews =()=> {
   const { movieId } = useParams();

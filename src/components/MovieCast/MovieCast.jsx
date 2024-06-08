@@ -1,9 +1,12 @@
-import { getCastById } from '../../api/movies-api';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-import Loader from '../../components/Loader/Loader';
 import { useLocation, useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
+
+import { getCastById } from '../../api/movies-api';
+import { defaultImg } from '../../api/helpers'
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import Loader from '../../components/Loader/Loader';
 import css from './MovieCast.module.css';
+
 
 export default function MovieCast() {
   const { movieId } = useParams();
@@ -34,9 +37,6 @@ export default function MovieCast() {
   if (!cast) {
     return <Loader />;
   }
-
-  const defaultImg =
-    'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
 
   return (
     <div>

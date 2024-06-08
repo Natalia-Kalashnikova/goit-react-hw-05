@@ -1,18 +1,22 @@
 .back_link {
-  padding: 4px;
-  background-color: blue;
+  display: inline-block;
+
   margin-top: 8px;
   margin-bottom: 8px;
-  display: inline-block;
+  padding: 4px;
+
   color: white;
+  background-color: #646cff;
   border-radius: 4px;
 }
 
 .film_container {
   display: flex;
   gap: 16px;
-  border-bottom: 1px solid grey;
+
   padding-bottom: 8px;
+
+  border-bottom: 1px solid grey;
 }
 
 .info_part {
@@ -20,10 +24,12 @@
   flex-direction: column;
   gap: 16px;
 }
+
 .add_title {
   padding-top: 8px;
 }
+
 .addition {
-  border-bottom: 1px solid darkgrey;
   padding-bottom: 8px;
+  border-bottom: 1px solid darkgrey;
 }

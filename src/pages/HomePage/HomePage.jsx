@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import MovieList from '../../components/MovieList/MovieList';
 import { getTrendingMovies } from '../../api/movies-api';
+import MovieList from '../../components/MovieList/MovieList';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import Loader from '../../components/Loader/Loader';
 import css from './HomePage.module.css';
+
 
 const HomePage =()=> {
   const [trendingMovies, setTrendingMovies] = useState([]);
@@ -29,7 +30,7 @@ const HomePage =()=> {
 
   return (
     <div>
-      <h2 className={css.home_title}>Trending today</h2>
+      <h1 className={css.home_title}>Trending today</h1>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {trendingMovies.length > 0 && <MovieList movies={trendingMovies} />}
