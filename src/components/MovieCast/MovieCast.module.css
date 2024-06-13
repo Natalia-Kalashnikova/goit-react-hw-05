@@ -1,9 +1,9 @@
 .actor_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 16px;
-  margin-top: 8px;
+  padding: 20px 0;
 }
 
 .actor_card {

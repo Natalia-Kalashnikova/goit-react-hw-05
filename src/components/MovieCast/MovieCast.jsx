@@ -38,6 +38,10 @@ export default function MovieCast() {
     return <Loader />;
   }
 
+  if (cast.length === 0) {
+    return <div>We don't have casts for this movie.</div>;
+  }
+
   return (
     <div>
       {isError && <ErrorMessage />}
