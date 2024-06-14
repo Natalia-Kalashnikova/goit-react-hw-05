@@ -39,7 +39,7 @@ export default function MovieCast() {
   }
 
   if (cast.length === 0) {
-    return <div>We don't have casts for this movie.</div>;
+    return <div>We don't have cast for this movie.</div>;
   }
 
   return (
